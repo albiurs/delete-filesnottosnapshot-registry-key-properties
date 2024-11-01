@@ -13,7 +13,7 @@ if (Test-Path $registryPath) {
 
         if ($valueExists) {
             # If the value exists, delete it
-            Remove-ItemProperty -Path $registryPath -Name $valueName -Force
+            Remove-ItemProperty -Path $registryPath -Name $valueName -Force -Verbose
             Write-Output "Value '$valueName' has been successfully deleted from '$registryPath'."
         }
         else {
